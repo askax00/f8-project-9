@@ -1,0 +1,26 @@
+// day la 1 map trong sass
+$grid-breakpoints: (
+	sm: 576px,
+	md: 768px,
+	lg: 992px,
+	xl: 1200px,
+	xxl: 1400px,
+);
+
+// de lay ra gia tri breakpoint trong map $grid-breakpoints
+@mixin breakpoint($key) {
+	// su dung ham map-get de truy xuat gia tri $breakpoint tu 1 bien kieu map $grid-breakpoints
+	$breakpoint: map-get($grid-breakpoints, $key);
+	// neu lay duoc gia tri $breakpoint trong map $grid-breakpoints thi thuc hien ma ben trong
+	@if ($breakpoint) {
+		// thuc hien media query voi maxwidth $breakpoint - 0.2
+		@media (max-width: ($breakpoint - 0.2)) {
+			// cac noi dung se duoc chen vao mixin khi dc @include
+			@content;
+		}
+	}
+	// khi khong lay dc gia tri $breakpoint trong $grid-breakpoints thi thong bao loi
+	@else {
+		@error "the value #{$key} not in breakpoints list.";
+	}
+}

@@ -1,0 +1,21 @@
+{
+  "name": "du_an_9",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass scss:asset/css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/askax00/f8-project-9.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/askax00/f8-project-9/issues"
+  },
+  "homepage": "https://github.com/askax00/f8-project-9#readme",
+  "description": ""
+}
