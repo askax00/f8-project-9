@@ -2,15 +2,26 @@
 
 html {
 	--text-color: #1a162e;
-	--icon-color: brightness(0) saturate(100%) invert(5%) sepia(56%)
-		saturate(2167%) hue-rotate(233deg) brightness(91%) contrast(92%);
+	--icon-color: brightness(0) saturate(100%) invert(5%) sepia(56%) saturate(2167%) hue-rotate(233deg) brightness(91%)
+		contrast(92%);
 	--body-bg-color: #f6f6f6;
 	--header-bg-color: #eee;
+	@include abstracts.breakpoint(lg) {
+		--header-bg-color: #fff;
+		--header-shadow-color: rgba(237, 237, 246, 0.2);
+	}
 	--top-act-bg-color: #fff;
 	--top-act-shadow: rgba(237, 237, 246, 0.2);
 	--top-act-separate: #ededf6;
+	--dropdown-bg-color: #fff;
+	--dropdown-shadow-color: rgba(200, 200, 200, 0.4);
+	--dropdown-arrow-color: brightness(0) saturate(100%) invert(100%) sepia(3%) saturate(191%) hue-rotate(205deg)
+		brightness(117%) contrast(100%);
+	--sidebar-color: #fff;
+	--sidebar-shadow: 0 40px 90px 20px rgba(200, 200, 200, 0.4);
+	--topmenu-hover-color: #0071dc;
+	--topmenu-border-color: #d2d1d6;
 
-	@include abstracts.breakpoint(lg) {
-		--header-bg-color: #fff;
-	}
+	--menu-column-icon-color: brightness(0) saturate(100%) invert(11%) sepia(28%) saturate(925%) hue-rotate(210deg)
+		brightness(91%) contrast(103%);
 }
